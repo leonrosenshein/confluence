@@ -11,6 +11,9 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/janeczku/go-spinner"
+	"github.com/vardius/progress-go"
 )
 
 const (
@@ -69,9 +72,13 @@ func main() {
 
 	allResults := LoadAllBlogs(jiraClient)
 
+	pb := progress.New(0, int64(len(allResults)))
+	pb.Start()
 	for i := range allResults {
+		pb.Advance(1)
 		GetBlogDetails(jiraClient, allResults, i)
 	}
+	pb.Stop()
 
 	sort.Slice(allResults, func(i, j int) bool {
 		return allResults[i].Likes < allResults[j].Likes
@@ -109,6 +116,7 @@ func GetBlogDetails(jiraClient JiraClient, allResults []blogEntry, i int) {
 }
 
 func LoadAllBlogs(blogReader JiraClient) []blogEntry {
+	spin := spinner.StartNew("Loading blog list...")
 	allResults := []blogEntry{}
 	limit := 0
 	size := 0
@@ -123,6 +131,7 @@ func LoadAllBlogs(blogReader JiraClient) []blogEntry {
 		limit = blogs.Limit
 		size = blogs.Size
 	}
+	spin.Stop()
 	return allResults
 }
 
