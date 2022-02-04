@@ -85,7 +85,7 @@ func main() {
 	})
 
 	for _, blog := range allResults {
-		fmt.Printf("Title: %s Date:%s likes: %d\n", blog.Title, blog.Published.Format("2006-01-02"), blog.Likes)
+		fmt.Printf("Title: %s Date:%s likes: %d permalink: %s\n", blog.Title, blog.Published.Format("2006-01-02"), blog.Likes, blog.Links["tinyui"])
 	}
 }
 
