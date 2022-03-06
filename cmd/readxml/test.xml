@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-generic datetime="2022-02-19 19:01:18">
+    <object class="User2ContentRelationEntity" package="com.atlassian.confluence.internal.relations.dao">
+        <id name="id">501383288</id>
+        <property name="targetContent" class="BlogPost" package="com.atlassian.confluence.pages">
+            <id name="id">501088340</id>
+        </property>
+        <property name="sourceContent" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="targetType" enum-class="RelatableEntityTypeEnum" package="com.atlassian.confluence.internal.relations">BLOG</property>
+        <property name="relationName"><![CDATA[touched]]></property>
+        <property name="creationDate">2021-02-26 21:26:31.000</property>
+        <property name="lastModificationDate">2021-02-26 21:26:31.000</property>
+        <property name="creator" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="lastModifier" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+    </object>
+    <object class="User2ContentRelationEntity" package="com.atlassian.confluence.internal.relations.dao">
+        <id name="id">496500783</id>
+        <property name="targetContent" class="BlogPost" package="com.atlassian.confluence.pages">
+            <id name="id">496566290</id>
+        </property>
+        <property name="sourceContent" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="targetType" enum-class="RelatableEntityTypeEnum" package="com.atlassian.confluence.internal.relations">BLOG</property>
+        <property name="relationName"><![CDATA[touched]]></property>
+        <property name="creationDate">2021-02-24 19:13:01.000</property>
+        <property name="lastModificationDate">2021-02-24 19:13:01.000</property>
+        <property name="creator" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="lastModifier" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+    </object>
+    <object class="User2ContentRelationEntity" package="com.atlassian.confluence.internal.relations.dao">
+        <id name="id">501383290</id>
+        <property name="targetContent" class="BlogPost" package="com.atlassian.confluence.pages">
+            <id name="id">501088342</id>
+        </property>
+        <property name="sourceContent" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="targetType" enum-class="RelatableEntityTypeEnum" package="com.atlassian.confluence.internal.relations">BLOG</property>
+        <property name="relationName"><![CDATA[collaborator]]></property>
+        <property name="creationDate">2021-02-26 21:27:29.000</property>
+        <property name="lastModificationDate">2021-02-26 21:27:29.000</property>
+        <property name="creator" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="lastModifier" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+    </object>
+    <object class="User2ContentRelationEntity" package="com.atlassian.confluence.internal.relations.dao">
+        <id name="id">501383291</id>
+        <property name="targetContent" class="BlogPost" package="com.atlassian.confluence.pages">
+            <id name="id">501088342</id>
+        </property>
+        <property name="sourceContent" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="targetType" enum-class="RelatableEntityTypeEnum" package="com.atlassian.confluence.internal.relations">BLOG</property>
+        <property name="relationName"><![CDATA[touched]]></property>
+        <property name="creationDate">2021-02-26 21:27:56.000</property>
+        <property name="lastModificationDate">2021-02-26 21:27:56.000</property>
+        <property name="creator" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="lastModifier" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+    </object>
+    <object class="User2ContentRelationEntity" package="com.atlassian.confluence.internal.relations.dao">
+        <id name="id">501383292</id>
+        <property name="targetContent" class="BlogPost" package="com.atlassian.confluence.pages">
+            <id name="id">501088344</id>
+        </property>
+        <property name="sourceContent" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="targetType" enum-class="RelatableEntityTypeEnum" package="com.atlassian.confluence.internal.relations">BLOG</property>
+        <property name="relationName"><![CDATA[collaborator]]></property>
+        <property name="creationDate">2021-02-26 21:28:41.000</property>
+        <property name="lastModificationDate">2021-02-26 21:28:41.000</property>
+        <property name="creator" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="lastModifier" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+    </object>
+    <object class="User2ContentRelationEntity" package="com.atlassian.confluence.internal.relations.dao">
+        <id name="id">496500779</id>
+        <property name="targetContent" class="BlogPost" package="com.atlassian.confluence.pages">
+            <id name="id">496566290</id>
+        </property>
+        <property name="sourceContent" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="targetType" enum-class="RelatableEntityTypeEnum" package="com.atlassian.confluence.internal.relations">BLOG</property>
+        <property name="relationName"><![CDATA[collaborator]]></property>
+        <property name="creationDate">2021-02-24 19:11:37.000</property>
+        <property name="lastModificationDate">2021-02-24 19:11:37.000</property>
+        <property name="creator" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="lastModifier" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+    </object>
+    <object class="User2ContentRelationEntity" package="com.atlassian.confluence.internal.relations.dao">
+        <id name="id">501383294</id>
+        <property name="targetContent" class="BlogPost" package="com.atlassian.confluence.pages">
+            <id name="id">501088344</id>
+        </property>
+        <property name="sourceContent" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="targetType" enum-class="RelatableEntityTypeEnum" package="com.atlassian.confluence.internal.relations">BLOG</property>
+        <property name="relationName"><![CDATA[touched]]></property>
+        <property name="creationDate">2021-02-26 21:29:06.000</property>
+        <property name="lastModificationDate">2021-02-26 21:29:06.000</property>
+        <property name="creator" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="lastModifier" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+    </object>
+    <object class="User2ContentRelationEntity" package="com.atlassian.confluence.internal.relations.dao">
+        <id name="id">496500777</id>
+        <property name="targetContent" class="BlogPost" package="com.atlassian.confluence.pages">
+            <id name="id">496566287</id>
+        </property>
+        <property name="sourceContent" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="targetType" enum-class="RelatableEntityTypeEnum" package="com.atlassian.confluence.internal.relations">BLOG</property>
+        <property name="relationName"><![CDATA[touched]]></property>
+        <property name="creationDate">2021-02-24 19:09:53.000</property>
+        <property name="lastModificationDate">2021-02-24 19:09:53.000</property>
+        <property name="creator" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="lastModifier" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+    </object>
+    <object class="User2ContentRelationEntity" package="com.atlassian.confluence.internal.relations.dao">
+        <id name="id">761626626</id>
+        <property name="targetContent" class="BlogPost" package="com.atlassian.confluence.pages">
+            <id name="id">760152069</id>
+        </property>
+        <property name="sourceContent" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="targetType" enum-class="RelatableEntityTypeEnum" package="com.atlassian.confluence.internal.relations">BLOG</property>
+        <property name="relationName"><![CDATA[collaborator]]></property>
+        <property name="creationDate">2021-06-22 14:15:41.000</property>
+        <property name="lastModificationDate">2021-06-22 14:15:41.000</property>
+        <property name="creator" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="lastModifier" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+    </object>
+    <object class="User2ContentRelationEntity" package="com.atlassian.confluence.internal.relations.dao">
+        <id name="id">496500788</id>
+        <property name="targetContent" class="BlogPost" package="com.atlassian.confluence.pages">
+            <id name="id">496566292</id>
+        </property>
+        <property name="sourceContent" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="targetType" enum-class="RelatableEntityTypeEnum" package="com.atlassian.confluence.internal.relations">BLOG</property>
+        <property name="relationName"><![CDATA[touched]]></property>
+        <property name="creationDate">2021-02-24 19:16:07.000</property>
+        <property name="lastModificationDate">2021-02-24 19:16:07.000</property>
+        <property name="creator" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="lastModifier" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+    </object>
+    <object class="User2ContentRelationEntity" package="com.atlassian.confluence.internal.relations.dao">
+        <id name="id">761626625</id>
+        <property name="targetContent" class="BlogPost" package="com.atlassian.confluence.pages">
+            <id name="id">760152069</id>
+        </property>
+        <property name="sourceContent" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="targetType" enum-class="RelatableEntityTypeEnum" package="com.atlassian.confluence.internal.relations">BLOG</property>
+        <property name="relationName"><![CDATA[touched]]></property>
+        <property name="creationDate">2021-06-22 14:15:41.000</property>
+        <property name="lastModificationDate">2021-06-22 14:15:41.000</property>
+        <property name="creator" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="lastModifier" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+    </object>
+    <object class="BlogPost" package="com.atlassian.confluence.pages">
+        <id name="id">669515782</id>
+        <property name="hibernateVersion">16</property>
+        <property name="title"><![CDATA[Rice and Garlic]]></property>
+        <property name="lowerTitle"><![CDATA[rice and garlic]]></property>
+        <collection name="bodyContents" class="java.util.Collection">
+            <element class="BodyContent" package="com.atlassian.confluence.core">
+                <id name="id">669548550</id>
+            </element>
+        </collection>
+        <collection name="outgoingLinks" class="java.util.Collection">
+            <element class="OutgoingLink" package="com.atlassian.confluence.links">
+                <id name="id">671023175</id>
+            </element>
+            <element class="OutgoingLink" package="com.atlassian.confluence.links">
+                <id name="id">671023176</id>
+            </element>
+            <element class="OutgoingLink" package="com.atlassian.confluence.links">
+                <id name="id">671023177</id>
+            </element>
+        </collection>
+        <collection name="contentProperties" class="java.util.Collection">
+            <element class="ContentProperty" package="com.atlassian.confluence.content">
+                <id name="id">669581343</id>
+            </element>
+            <element class="ContentProperty" package="com.atlassian.confluence.content">
+                <id name="id">669581344</id>
+            </element>
+            <element class="ContentProperty" package="com.atlassian.confluence.content">
+                <id name="id">669581347</id>
+            </element>
+            <element class="ContentProperty" package="com.atlassian.confluence.content">
+                <id name="id">670761072</id>
+            </element>
+        </collection>
+        <property name="version">3</property>
+        <property name="creator" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="creationDate">2021-05-12 17:32:45.000</property>
+        <property name="lastModifier" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="lastModificationDate">2021-05-12 23:00:15.000</property>
+        <property name="versionComment"><![CDATA[]]></property>
+        <collection name="historicalVersions" class="java.util.Collection">
+            <element class="BlogPost" package="com.atlassian.confluence.pages">
+                <id name="id">669515789</id>
+            </element>
+            <element class="BlogPost" package="com.atlassian.confluence.pages">
+                <id name="id">670957581</id>
+            </element>
+        </collection>
+        <property name="contentStatus"><![CDATA[current]]></property>
+        <property name="space" class="Space" package="com.atlassian.confluence.spaces">
+            <id name="id">447053826</id>
+        </property>
+    </object>
+    <object class="User2ContentRelationEntity" package="com.atlassian.confluence.internal.relations.dao">
+        <id name="id">496500789</id>
+        <property name="targetContent" class="BlogPost" package="com.atlassian.confluence.pages">
+            <id name="id">496566294</id>
+        </property>
+        <property name="sourceContent" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="targetType" enum-class="RelatableEntityTypeEnum" package="com.atlassian.confluence.internal.relations">BLOG</property>
+        <property name="relationName"><![CDATA[collaborator]]></property>
+        <property name="creationDate">2021-02-24 19:28:21.000</property>
+        <property name="lastModificationDate">2021-02-24 19:28:21.000</property>
+        <property name="creator" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+        <property name="lastModifier" class="ConfluenceUserImpl" package="com.atlassian.confluence.user">
+            <id name="key"><![CDATA[4028e48576b68b3f017764f4769d0084]]></id>
+        </property>
+    </object>
+    <object class="BodyContent" package="com.atlassian.confluence.core">
+        <id name="id">445350645</id>
+        <property name="body"><![CDATA[<p>As an example, an automotive radar could be precise and give an precise and repeatable output that a target is at 5.0-degrees. But if the radar were mis-aligned by 5-degrees, the correct value would be 0-degrees, so the radar would be precise but not accurate.</p>]]></property>
+        <property name="content" class="Comment" package="com.atlassian.confluence.pages">
+            <id name="id">445318254</id>
+        </property>
+        <property name="bodyType">2</property>
+    </object>
+</hibernate-generic>

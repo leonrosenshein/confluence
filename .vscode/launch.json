@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "ReadXML",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "cmd/readxml"
+        },
+        {
             "name": "Likes",
             "type": "go",
             "request": "launch",
