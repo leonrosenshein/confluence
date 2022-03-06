@@ -11,6 +11,16 @@ import (
 	"time"
 )
 
+const (
+	postDirectoryName = "posts"
+	headerFormat      = `---
+title: "%s"
+date: %s
+draft: false
+---
+`
+)
+
 type Property struct {
 	XMLName xml.Name `xml:"property"`
 	Name    string   `xml:"name,attr"`
@@ -106,19 +116,27 @@ func main() {
 		return blogPosts[i].Date.Before(blogPosts[j].Date)
 	})
 
-	os.Mkdir("posts", 0777)
+	os.RemoveAll(postDirectoryName)
+	os.Mkdir(postDirectoryName, 0777)
 	for idx, post := range blogPosts {
 		fmt.Printf("\t%d: `%s` created on %s\n", idx, post.Title, post.Date)
 		baseName := "posts\\" + post.Date.Format("2006-01-02")
-		fileName := baseName
+		fileName := baseName + ".html"
 		_, err := os.Stat(fileName)
 		ext := 0
 		for err == nil {
 			ext++
-			fileName = fmt.Sprintf("%s_%d", baseName, ext)
+			fileName = fmt.Sprintf("%s_%d.html", baseName, ext)
 			_, err = os.Stat(fileName)
 		}
-		ioutil.WriteFile(fileName, []byte(post.Body), 0666)
+		file, err := os.Create(fileName)
+		if err != nil {
+			fmt.Println(err)
+		}
+
+		file.WriteString(fmt.Sprintf(headerFormat, post.Title, post.Date.Format("2006-01-02")))
+		file.WriteString(post.Body)
+		file.Close()
 	}
 }
 
@@ -144,7 +162,7 @@ func parseBlogPost(obj Object, posts map[string]BlogPost) {
 	for _, prop := range obj.Properties {
 		data := prop.Data
 		if prop.Name == "title" {
-			post.Title = data
+			post.Title = strings.Replace(data, "\"", "'", -1)
 		} else if prop.Name == "creationDate" {
 			post.Date, err = time.Parse("2006-01-02 15:04:05", data)
 			if err != nil {
