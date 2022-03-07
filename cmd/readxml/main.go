@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"regexp"
 	"sort"
 	"strings"
 	"time"
@@ -19,6 +20,8 @@ date: %s
 draft: false
 ---
 `
+	linkMatcher   = `https://confluence.int.aurora.tech(/x/[\w-]+)`
+	newLinkFormat = `../%s`
 )
 
 type Property struct {
@@ -56,7 +59,7 @@ type BlogPost struct {
 
 func main() {
 
-	goodDates := getGoodDates()
+	titleMap, linkMap := getPostInfo()
 
 	// Open our xmlFile
 	//	xmlFile, err := os.Open("c:\\Users\\leon\\repos\\confluence\\cmd\\readxml\\test.xml")
@@ -97,20 +100,7 @@ func main() {
 		}
 	}
 
-	fmt.Printf("Found %d blogs\n", len(posts))
-	blogPosts := make([]BlogPost, 0, len(posts))
-	for _, post := range posts {
-		p := post
-		goodDate, found := goodDates[p.Title]
-		if found {
-			p.Date = goodDate.Date
-		}
-		p.Body, found = bodies[p.BodyId]
-		if !found {
-			fmt.Printf("Couldn't find a body for post `%s`\n", p.Title)
-		}
-		blogPosts = append(blogPosts, p)
-	}
+	blogPosts := fixupPosts(posts, titleMap, linkMap, bodies)
 
 	sort.Slice(blogPosts, func(i, j int) bool {
 		return blogPosts[i].Date.Before(blogPosts[j].Date)
@@ -138,6 +128,26 @@ func main() {
 		file.WriteString(post.Body)
 		file.Close()
 	}
+}
+
+func fixupPosts(posts map[string]BlogPost, titleMap map[string]time.Time, linkMap map[string]time.Time, bodies map[string]string) []BlogPost {
+	fmt.Printf("Found %d blogs\n", len(posts))
+	blogPosts := make([]BlogPost, 0, len(posts))
+	for _, post := range posts {
+		p := post
+		info, hasDate := titleMap[p.Title]
+		if hasDate {
+			p.Date = info
+		}
+		body, found := bodies[p.BodyId]
+		if !found {
+			fmt.Printf("Couldn't find a body for post `%s`\n", p.Title)
+		}
+
+		p.Body = updateLinks(body, linkMap)
+		blogPosts = append(blogPosts, p)
+	}
+	return blogPosts
 }
 
 func parseBodyContent(obj Object, bodies map[string]string) {
@@ -178,10 +188,11 @@ func parseBlogPost(obj Object, posts map[string]BlogPost) {
 	}
 }
 
-func getGoodDates() map[string]BlogPost {
+func getPostInfo() (map[string]time.Time, map[string]time.Time) {
 	linkFile, err := os.Open("c:\\Users\\leon\\Downloads\\blogDates.txt")
 
-	entries := map[string]BlogPost{}
+	titleMap := map[string]time.Time{}
+	linkMap := map[string]time.Time{}
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
@@ -199,12 +210,31 @@ func getGoodDates() map[string]BlogPost {
 			fmt.Println(err)
 			os.Exit(1)
 		}
-		entry := BlogPost{
-			Title: title,
-			Date:  date,
-		}
-		entries[title] = entry
+		link := parts[3]
+
+		titleMap[title] = date
+		linkMap[link] = date
 	}
 
-	return entries
+	return titleMap, linkMap
+}
+
+func updateLinks(original string, linkMap map[string]time.Time) string {
+
+	newBody := original
+	re := regexp.MustCompile(linkMatcher)
+
+	matches := re.FindAllStringSubmatch(original, -1)
+	for idx, val := range matches {
+		match := val[0]
+		capture := val[1]
+		info, found := linkMap[capture]
+		if !found {
+			fmt.Printf("Unable to find match for %d: match:`%s` group:'%s'\n", idx, match, capture)
+			break
+		}
+		newLink := fmt.Sprintf(newLinkFormat, info.Format("2006-01-02"))
+		newBody = strings.Replace(newBody, match, newLink, -1)
+	}
+	return newBody
 }
