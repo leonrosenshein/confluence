@@ -20,7 +20,7 @@ date: %s
 draft: false
 ---
 `
-	linkMatcher   = `https://confluence.int.aurora.tech(/x/[\w-]+)`
+	linkMatcher   = `https://confluence.int.aurora.tech(/x/[\w-_]+)`
 	newLinkFormat = `../%s`
 )
 
